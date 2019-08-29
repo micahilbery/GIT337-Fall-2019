@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*-------------------------
+Micah Ilbery
+GIT337 08-28-2019
+Overview Assignment
+-------------------------*/
+
+/* Variables */
+/*=======================================*/
+:root {
+  --bg-color: #fdfdff;
+  --bg-color-two: rgba(0,0,0,0.3);
+  --font-color-one: #2f3033;
+  --font-color-two: #6f7681;
+  --font-color-three: #a5acb7;
+  --logo-color: #e03c9e;
+  --txt-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #42434a;
+    --bg-color-two: rgba(255,255,255,0.75);
+    --font-color-one: #f0f2f8;
+    --font-color-two: #a5acb7;
+    --font-color-three: #898a97;
+    --logo-color: #ec7cbd;
+    --txt-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Reset */
+/*=======================================*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Layout */
+/*=======================================*/
+body {
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main { flex: 1 0 auto; }
+
+.wrapper, .wrapper-xl {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.wrapper {
+  max-width: 66ch;
+}
+
+.wrapper-xl {
+  max-width: 72em;
+}
+
+.favorites-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 2rem 0;
+}
+
+.avatar-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Typography */
+/*=======================================*/
+/* Use Inter font https://rsms.me/inter/ */
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  color: var(--font-color-one);
+  font-family: 'Inter', 'Open Sans', 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+h1, h2,
+h3, h4 {
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.logo-type,
+.logo-type a {
+  color: var(--logo-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.favorites-heading {
+  margin-bottom: 0;
+}
+
+.favorites-subheading {
+  color: var(--font-color-two);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.copyright {
+  color: var(--font-color-three);
+}
+
+/* Elements */
+/*=======================================*/
+.avatar {
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.card {
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  display: grid;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+
+.card:hover .card-overlay,
+.card:focus .card-overlay {
+  opacity: 1;
+}
+
+.card:hover .card-img,
+.card:focus .card-img {
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+.card-img {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  transition: all 0.3s ease;
+}
+
+.card-overlay {
+  background: var(--bg-color-two);
+  color: var(--bg-color);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  line-height: 1;
+  margin: 0;
+  opacity: 0;
+  padding: 1rem;
+  position: absolute;
+  text-shadow: var(--txt-shadow);
+  transition: opacity 0.3s ease;
+}
+
+/* Extra Responsiveness */
+/*=======================================*/
+@media (min-width: 320px) {
+  html { font-size: 18px; }
+}
+
+@media (min-width: 768px) {
+  .favorites-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media print {
+  html { font-size: 14px; }
+}
