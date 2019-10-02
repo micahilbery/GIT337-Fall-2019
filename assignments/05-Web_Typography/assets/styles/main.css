@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/*-------------------------
+Micah Ilbery
+GIT337 10-02-2019
+Overview Assignment
+-------------------------*/
+
+/* Variables */
+/*=======================================*/
+:root {
+  --font-display: 'Playfair Display SC', 'Georgia', serif;
+  --font-main: 'Libre Baskerville', 'Georgia', serif;
+  --font-alt-one: 'Vast Shadow', 'Arial Black', sans-serif;
+  --font-alt-two: 'Yeseva One', 'Georgia', serif;
+
+  --font-color-display: #004386;
+  --font-color-main: #72726c;
+  --font-color-alt-one: #90062c;
+  --font-color-alt-two: #a0a097;
+
+  --bg-main: #776c66;
+  --bg-alt-one: #fffaec;
+  --bg-alt-two: #e5e5d9;
+
+  --txt-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color-display: #6f96bb;
+    --font-color-main: #cecec3;
+    --font-color-alt-one: #dd5278;
+    --font-color-alt-two: #ecece4;
+
+    --bg-main: #141412;
+    --bg-alt-one: #474641;
+    --bg-alt-two: #33322f;
+
+    --txt-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.5),
+              0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Reset */
+/*=======================================*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Layout */
+/*=======================================*/
+body {
+  background: var(--bg-main);
+  display: grid;
+  min-height: 100vh;
+  padding: 1rem;
+  place-items: center;
+  width: 100%;
+}
+
+#invite-card {
+  background: var(--bg-alt-one);
+  box-shadow: var(--shadow);
+  max-width: 60ch;
+  padding: 4rem;
+  position: relative;
+  z-index: 0;
+}
+
+#invite-card * { z-index: 1; }
+
+#invite-card:before {
+  border: 10px solid var(--bg-alt-two);
+  content: '';
+  position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+#invite-card:after {
+  border: 5px solid var(--bg-alt-two);
+  content: '';
+  position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+}
+
+dl {
+  text-align: center;
+  margin: 0 0 3rem 0;
+}
+
+dt,
+dd {
+  display: inline-block;
+  margin: .1rem;
+}
+
+footer { text-align: center; }
+
+/* Typography */
+/*=======================================*/
+
+html {
+  color: var(--font-color-main);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-shadow: var(--txt-shadow);
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+#invite-header {
+  color: var(--font-color-display);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: .75;
+  margin: 1rem 0 3rem 0;
+}
+
+#invite-header .alt-text {
+  color: var(--font-color-main);
+  font-family: var(--font-alt-two);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.amp { color: var(--font-color-alt-two); }
+
+#invite-datetime {
+  border-bottom: 5px double var(--bg-alt-two);
+  border-top: 5px double var(--bg-alt-two);
+  color: var(--font-color-alt-one);
+  font-family: var(--font-alt-one);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  padding: .25rem;
+  margin-bottom: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#invite-datetime .alt-text {
+  color: var(--font-color-alt-two);
+  font-family: var(--font-alt-two);
+  font-size: 1rem;
+}
+
+#invite-address {
+  color: var(--font-color-display);
+  font-family: var(--font-alt-two);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#main-info {
+  margin: 0 auto;
+  max-width: 36ch;
+}
+
+#main-info:first-letter {
+  border: 4px double var(--font-color-alt-one);
+  color: var(--font-color-alt-one);
+  float: left;
+  font-family: var(--font-alt-two);
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: .25rem;
+  padding: .2rem;
+}
+
+footer {
+  border-top: 5px double var(--bg-alt-two);
+  color: var(--font-color-alt-one);
+  font-family: var(--font-main);
+  font-size: .75rem;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer small {
+  color: var(--font-color-alt-two);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* Extra Responsiveness */
+/*=======================================*/
+@media (min-width: 320px) {
+  html { font-size: 18px; }
+}
+
+@media (max-width: 320px) {
+  body { padding: 0; }
+  #invite-card { padding: 1rem; }
+  #invite-card:before,
+  #invite-card:after { display: none; }
+  #invite-header { font-size: 4rem; }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  #invite-address { font-size: 1rem; }
+}
+
+@media print {
+  html { font-size: 14px; }
+}
