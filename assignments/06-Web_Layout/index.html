@@ -53,7 +53,7 @@ Web Layout Assignment
   </head>
   <body>
     <nav>
-      <a href="/"><svg><use ></use></svg></a>
+      <a href="/"><svg class="icon"><use xlink:href="assets/images/sprites.svg#logo"></use></svg></a>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -63,24 +63,25 @@ Web Layout Assignment
     </nav>
 
     <header>
-      <h1></h1>
-      <h2 id="tagline"></h2>
+      <h1>Designing your world</h1>
+      <h2 id="tagline">One pixel at a time.</h2>
     </header>
 
     <main>
       <section id="about">
         <h2>About Us</h2>
         <div id="about-us">
-          <p></p>
-          <h3></h3>
+          <p>Two Trees Creative is a full-service graphic design agency based in Ventura, CA. Our goal is to provide elegant work and unsurpassed customer service to our clients in every way.</p>
+          <h3>Meet Our Team of Creatives</h3>
+          <p>Collectively we have over 15 years experience in the graphic design industry, and our services include brand identity development, business cards, brochures, flyers, catalogs, and more. Thank you for considering us for your next project, and we hope to here from you soon.</p>
         </div>
         <div id="team">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="assets/images/team/alex_morrales.jpg" alt="Alex Morrales">
+          <img src="assets/images/team/david_kim.jpg" alt="David Kim">
+          <img src="assets/images/team/jenny_tabers.jpg" alt="Jenny Tabers">
+          <img src="assets/images/team/joey_barrett.jpg" alt="Joey Barrett">
+          <img src="assets/images/team/melinda_lee.jpg" alt="Melinda Lee">
+          <img src="assets/images/team/rachel_dotson.jpg" alt="Rachel Dotson">
         </div>
       </section>
 
@@ -95,9 +96,18 @@ Web Layout Assignment
       <section  id="contact">
         <div id="contact-form">
           <h2>Contact Us</h2>
+          <form>
+            <input id="email" placeholder="Your Email Address">
+            <input id="subject" placeholder="Subject of Your Message">
+            <textarea id="message" placeholder="Your message goes here..."></textarea>
+            <button id="send" type="submit">
+              send
+              <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+            </button>
+          </form>
         </div>
         <div id="map">
-          <img src="" alt="">
+          <img src="assets/images/map.png" alt="Map of our area.">
         </div>
       </section>
     </main>
@@ -106,10 +116,35 @@ Web Layout Assignment
       <ul id="socials">
         <li>
           <a href="#">
-            <svg><use></use></svg>
+            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
           </a>
         </li>
       </ul>
+      <a id="to-top" href="#top">
+        <small>Back to Top</small>
+        <span id="to-top-btn">
+          <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+        </span>
     </footer>
   </body>
 </html>
