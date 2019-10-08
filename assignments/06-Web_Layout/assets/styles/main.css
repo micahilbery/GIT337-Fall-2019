@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*-------------------------
+Micah Ilbery
+GIT337 10-08-2019
+Web Layout Assignment
+-------------------------*/
+
+/* Variables */
+/*=======================================*/
+:root {
+  
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+  }
+}
+
+/* Reset */
+/*=======================================*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Layout */
+/*=======================================*/
+body {
+  
+}
+
+main { flex: 1 0 auto; }
+
+
+
+/* Typography */
+/*=======================================*/
+
+html {
+  color: black;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Elements */
+/*=======================================*/
+
+
+/* Extra Responsiveness */
+/*=======================================*/
+@media (min-width: 320px) {
+  html { font-size: 18px; }
+}
+
+@media (min-width: 768px) {
+  .favorites-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media print {
+  html { font-size: 14px; }
+}
