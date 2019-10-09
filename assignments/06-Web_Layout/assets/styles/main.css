@@ -8,7 +8,20 @@ Web Layout Assignment
 /* Variables */
 /*=======================================*/
 :root {
-  
+  --blue: #2d3ea3;
+  --green: #5b866b;
+  --gold: #b98c48;
+  --tan: #86765c;
+  --brown: #524741;
+
+  --white: white;
+  --light-grey: #ebebeb;
+  --grey: #afafaf;
+  --dark-grey: #222;
+  --black: black;
+
+  --font-base: effra, sans-serif;
+  --font-alt: kepler-std-display, serif;
 }
 
 /* Reset */
@@ -36,30 +49,119 @@ svg {
 /* Layout */
 /*=======================================*/
 body {
-  
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav {
+  text-align: center;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 main { flex: 1 0 auto; }
 
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding: 0 1rem;
+  max-width: 64em;
+  margin: 0 auto;
+}
 
+header h1, header h2 { color: var(--white); }
+
+header h1 { margin: 0 0 -1rem 0; }
+
+#tagline {
+  font-family: var(--font-alt);
+  text-transform: none;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
+
+#about,
+#portfolio {
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+#about h3 {
+  color: var(--tan);
+  font-size: 2rem
+}
+
+#team {
+  place-self: center;
+  text-align: center;
+}
+
+#portfolio {
+  grid-template-columns: 1fr;
+  place-items: center;
+  max-width: 100%;
+}
 
 /* Typography */
 /*=======================================*/
 
 html {
-  color: black;
-  font-family: sans-serif;
+  color: var(--black);
+  font-family: var(--font-base);
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
 }
 
+h1, h2,
+h3, h4,
+h5, h6 {
+  color: var(--dark-grey);
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
 /* Elements */
 /*=======================================*/
+header {
+  background: var(--blue);
+  background-image: url("../images/twotrees.jpg");
+  background-blend-mode: exclusion;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  min-height: 90vh;
+}
+
+#portfolio {
+  background: var(--green);
+  color: var(--white);
+}
+
 .logo {
-  width: 122px;
-  height: 122px;
-  fill: black;
+  color: var(--brown);
+}
+
+.logo svg {
+  width: 200px;
+  height: 200px;
+  fill: currentColor;
 }
 
 /* Extra Responsiveness */
@@ -69,8 +171,12 @@ html {
 }
 
 @media (min-width: 768px) {
-  .favorites-container {
-    grid-template-columns: repeat(3, 1fr);
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about h2 {
+    grid-column: span 2;
   }
 }
 
