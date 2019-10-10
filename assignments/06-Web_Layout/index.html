@@ -59,9 +59,12 @@ Web Layout Assignment
         </svg>
       </a>
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="#">Home</a></li>
+        <li>|</li>
         <li><a href="#about">About</a></li>
+        <li>|</li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li>|</li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -85,7 +88,6 @@ Web Layout Assignment
           <img src="assets/images/team/alex_morrales.jpg" alt="Alex Morrales">
           <img src="assets/images/team/david_kim.jpg" alt="David Kim">
           <img src="assets/images/team/jenny_tabers.jpg" alt="Jenny Tabers">
-          <br>
           <img src="assets/images/team/joey_barrett.jpg" alt="Joey Barrett">
           <img src="assets/images/team/melinda_lee.jpg" alt="Melinda Lee">
           <img src="assets/images/team/rachel_dotson.jpg" alt="Rachel Dotson">
@@ -95,16 +97,32 @@ Web Layout Assignment
       <section id="portfolio">
         <h2>Portfolio</h2>
         <div id="carousel-one" class="carousel">
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
+          <svg class="left-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M16.808 29.994l18.697-19.168a2.688 2.688 0 013.877 0l3.812 3.906a2.857 2.857 0 010 3.978L30.232 31.996 43.194 45.29a2.857 2.857 0 010 3.977l-3.812 3.908a2.688 2.688 0 01-3.877 0L16.808 34.006a2.855 2.855 0 01-.808-2.01 2.86 2.86 0 01.808-2.002z"/>
+          </svg>
+
+          <img src="assets/images/portfolio/_0000_akridge_bcard.jpg" alt>
+          <img src="assets/images/portfolio/_0001_balloon_races.jpg" alt>
+          <img src="assets/images/portfolio/_0002_seminar_flyer.jpg" alt>
+          <img src="assets/images/portfolio/_0003_eyedr_billboard.jpg" alt>
+
+          <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M45.192 29.994L26.495 10.826a2.688 2.688 0 00-3.877 0l-3.812 3.906a2.857 2.857 0 000 3.978l12.962 13.286L18.806 45.29a2.857 2.857 0 000 3.977l3.812 3.908a2.688 2.688 0 003.877 0l18.697-19.168c.542-.555.81-1.28.808-2.01a2.86 2.86 0 00-.808-2.002z"/>
+          </svg>
         </div>
         <div id="carousel-two" class="carousel">
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
-          <img src="assets/images/portfolio/.jpg" alt>
+          <svg class="left-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M16.808 29.994l18.697-19.168a2.688 2.688 0 013.877 0l3.812 3.906a2.857 2.857 0 010 3.978L30.232 31.996 43.194 45.29a2.857 2.857 0 010 3.977l-3.812 3.908a2.688 2.688 0 01-3.877 0L16.808 34.006a2.855 2.855 0 01-.808-2.01 2.86 2.86 0 01.808-2.002z"/>
+          </svg>
+
+          <img src="assets/images/portfolio/_0004_nerdcamp_logo.jpg" alt>
+          <img src="assets/images/portfolio/_0005_rockout_festival.jpg" alt>
+          <img src="assets/images/portfolio/_0006_history_of_flight.jpg" alt>
+          <img src="assets/images/portfolio/_0007_welder_poster.jpg" alt>
+
+          <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M45.192 29.994L26.495 10.826a2.688 2.688 0 00-3.877 0l-3.812 3.906a2.857 2.857 0 000 3.978l12.962 13.286L18.806 45.29a2.857 2.857 0 000 3.977l3.812 3.908a2.688 2.688 0 003.877 0l18.697-19.168c.542-.555.81-1.28.808-2.01a2.86 2.86 0 00-.808-2.002z"/>
+          </svg>
         </div>
       </section>
 
@@ -115,12 +133,14 @@ Web Layout Assignment
         <div id="contact-form">
           <h2>Contact Us</h2>
           <form>
-            <input id="email" placeholder="Your Email Address">
-            <input id="subject" placeholder="Subject of Your Message">
+            <input type="email" id="email" placeholder="Your Email Address">
+            <input type="text" id="subject" placeholder="Subject of Your Message">
             <textarea id="message" placeholder="Your message goes here..."></textarea>
             <button id="send" type="submit">
-              send
-              <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+              Send
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="currentColor">
+                <path d="M14 0A14 14 0 000 14a14 14 0 0014 14 14 14 0 0014-14A14 14 0 0014 0zm-2.4 4.375a1.176 1.176 0 01.866.361l8.18 8.386a1.251 1.251 0 01.354.876c0 .32-.117.638-.354.88l-8.18 8.386a1.176 1.176 0 01-1.696 0l-1.667-1.71a1.25 1.25 0 010-1.74l5.67-5.816-5.67-5.812a1.25 1.25 0 010-1.74l1.667-1.71a1.176 1.176 0 01.83-.361z"/>
+              </svg>
             </button>
           </form>
         </div>
@@ -130,35 +150,47 @@ Web Layout Assignment
     <footer>
       <ul id="socials">
         <li>
-          <a href="#">
-            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <a href="#" class="facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M7.215 0A7.2 7.2 0 000 7.215v25.57A7.2 7.2 0 007.215 40h25.57A7.2 7.2 0 0040 32.785V7.215A7.2 7.2 0 0032.785 0zM26 4h8v8h-4c-2 0-2 1-2 2v4h6v6h-6v14h-8V24h-6v-6h6v-6c0-2 0-8 6-8z"/>
+            </svg>
           </a>
         </li>
         <li>
-          <a href="#">
-            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <a href="#" class="twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M7.215 0A7.2 7.2 0 000 7.215v25.57A7.2 7.2 0 007.215 40h25.57A7.2 7.2 0 0040 32.785V7.215A7.2 7.2 0 0032.785 0zm18.021 8h.149c1.652 0 3.146.737 4.193 1.914a11.16 11.16 0 003.65-1.473 6.024 6.024 0 01-2.527 3.352A10.969 10.969 0 0034 10.838a12.012 12.012 0 01-2.865 3.137c.01.26.015.522.015.785 0 8.007-5.778 17.24-16.345 17.24C11.56 32 8.543 30.997 6 29.277c.45.057.908.084 1.371.084 2.692 0 5.165-.968 7.13-2.593-2.513-.049-4.63-1.802-5.362-4.21.35.072.71.11 1.08.11a5.51 5.51 0 001.515-.213c-2.628-.557-4.609-3.004-4.609-5.94v-.077c.775.453 1.66.728 2.602.76-1.542-1.087-2.557-2.94-2.557-5.042 0-1.111.285-2.154.78-3.049 2.833 3.666 7.065 6.08 11.839 6.332a6.405 6.405 0 01-.146-1.382c0-3.294 2.49-5.974 5.593-6.057z"/>
+            </svg>
           </a>
         </li>
         <li>
-          <a href="#">
-            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <a href="#" class="googleplus">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M7.215 0A7.2 7.2 0 000 7.215v25.57A7.2 7.2 0 007.215 40h25.57A7.2 7.2 0 0040 32.785V7.215A7.2 7.2 0 0032.785 0zm6.119 10c2.52 0 4.625.937 6.252 2.484l-2.533 2.483c-.694-.679-1.906-1.465-3.719-1.465-3.187 0-5.787 2.687-5.787 5.998 0 3.313 2.6 5.998 5.787 5.998 3.693 0 5.08-2.701 5.293-4.098h-5.293v-3.257h8.812c.08.475.149.95.149 1.574 0 5.428-3.574 9.283-8.961 9.283C8.174 29 4 24.752 4 19.5S8.174 10 13.334 10zm16 4.072H32v4.07h4v2.715h-4v4.07h-2.666v-4.07h-4v-2.714h4z"/>
+            </svg>
           </a>
         </li>
         <li>
-          <a href="#">
-            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <a href="#" class="pinterest">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M7.215 0A7.2 7.2 0 000 7.215v25.57A7.2 7.2 0 007.215 40h4.797c-.192-1.747-.364-4.964.078-6.87.398-1.724 2.568-10.935 2.568-10.935s-.656-1.322-.656-3.279c0-3.07 1.77-5.363 3.969-5.363 1.868 0 2.771 1.414 2.771 3.11 0 1.893-1.197 4.724-1.816 7.35-.517 2.198 1.094 3.995 3.246 3.995 3.896 0 6.89-4.14 6.89-10.115 0-5.288-3.77-8.985-9.156-8.985-6.236 0-9.896 4.714-9.896 9.584 0 1.898.725 3.935 1.63 5.04.18.218.208.41.155.632l-.611 2.506c-.097.405-.318.49-.735.295C7.711 25.68 6 21.65 6 18.41c0-6.966 5.024-13.367 14.484-13.367C28.09 5.043 34 10.503 34 17.799c0 7.613-4.764 13.738-11.377 13.738-2.221 0-4.31-1.205-5.023-2.58l-1.368 5.252c-.495 1.92-1.831 4.326-2.726 5.791h19.28A7.2 7.2 0 0040 32.785V7.215A7.2 7.2 0 0032.785 0z"/>
+            </svg>
           </a>
         </li>
         <li>
-          <a href="#">
-            <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <a href="#" class="dribbble">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M7.215 0A7.2 7.2 0 000 7.215v25.57A7.2 7.2 0 007.215 40h25.57A7.2 7.2 0 0040 32.785V7.215A7.2 7.2 0 0032.785 0H7.215zM20 5c8.285 0 15 6.716 15 15 0 8.284-6.715 15-15 15S5 28.284 5 20c0-8.284 6.715-15 15-15zm0 2.61c-1.05 0-2.065.146-3.04.392a57.846 57.846 0 014.36 6.797c2.648-1.121 4.728-2.657 6.235-4.6A12.326 12.326 0 0020 7.61zm-5.592 1.347a12.414 12.414 0 00-6.433 8.107c4.19-.028 7.818-.487 10.855-1.38a55.747 55.747 0 00-4.422-6.727zm15.045 3.05c-1.729 2.156-4.046 3.852-6.933 5.102.337.694.652 1.396.957 2.1 2.7-.465 5.66-.436 8.878.092a12.327 12.327 0 00-2.902-7.293zm-9.39 6.02c-3.477 1.093-7.627 1.647-12.438 1.653l-.016.32c0 3.009 1.08 5.77 2.87 7.918 2.715-4.073 6.196-6.778 10.421-8.1-.267-.6-.546-1.197-.837-1.79zm8.109 3.467a21.482 21.482 0 00-3.695.186 51.372 51.372 0 012.4 8.62 12.406 12.406 0 005.35-8.376 29.224 29.224 0 00-4.055-.43zm-6.28.735c-3.894 1.16-7.036 3.673-9.497 7.533 3.36 2.623 7.864 3.406 12.05 1.793a48.93 48.93 0 00-2.552-9.326z"/>
+            </svg>
           </a>
         </li>
       </ul>
       <a id="to-top" href="#top">
         <small>Back to Top</small>
         <span id="to-top-btn">
-          <svg class="icon"><use xlink:href="assets/images/sprites.svg#id'"></use></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor">
+            <path d="M29.994 18.808L10.826 37.505a2.688 2.688 0 000 3.877l3.906 3.812a2.857 2.857 0 003.978 0l13.286-12.962L45.29 45.194a2.857 2.857 0 003.977 0l3.908-3.812a2.688 2.688 0 000-3.877L34.006 18.808a2.855 2.855 0 00-2.01-.808 2.86 2.86 0 00-2.002.808z"/>
+          </svg>
         </span>
     </footer>
   </body>

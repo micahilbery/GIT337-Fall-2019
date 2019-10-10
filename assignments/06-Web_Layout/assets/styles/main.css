@@ -28,6 +28,7 @@ Web Layout Assignment
 /*=======================================*/
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 html,
@@ -38,84 +39,36 @@ body {
 
 img {
   max-width: 100%;
+  margin: .5rem;
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+  margin: 1rem 0;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 svg {
   fill: currentColor;
-  height: 16px;
-  width: 16px;
+  height: 28px;
+  width: 28px;
+  vertical-align: middle;
 }
 
-/* Layout */
-/*=======================================*/
-body {
-  background: var(--white);
-  color: var(--black);
-  min-height: 100vh;
-  width: 100%;
-}
+a { text-decoration: none; }
 
-nav {
-  text-align: center;
-}
-
-header {
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-
-main { flex: 1 0 auto; }
-
-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-  padding: 0 1rem;
-  max-width: 64em;
-  margin: 0 auto;
-}
-
-header h1, header h2 { color: var(--white); }
-
-header h1 { margin: 0 0 -1rem 0; }
-
-#tagline {
-  font-family: var(--font-alt);
-  text-transform: none;
-  font-weight: normal;
-  font-style: italic;
+ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-#about,
-#portfolio {
-  padding: 1rem 1rem 4rem 1rem;
-}
-
-#about h2 {
-  text-align: center;
-}
-
-#about h3 {
-  color: var(--tan);
-  font-size: 2rem
-}
-
-#team {
-  place-self: center;
-  text-align: center;
-}
-
-#portfolio {
-  grid-template-columns: 1fr;
-  place-items: center;
-  max-width: 100%;
-}
-
-/* Typography */
+/* Global */
 /*=======================================*/
-
 html {
   color: var(--black);
   font-family: var(--font-base);
@@ -136,21 +89,43 @@ h1, h2 {
   text-transform: uppercase;
 }
 
-/* Elements */
-/*=======================================*/
-header {
-  background: var(--blue);
-  background-image: url("../images/twotrees.jpg");
-  background-blend-mode: exclusion;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: var(--white);
-  min-height: 90vh;
+body {
+  background: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  width: 100%;
 }
 
-#portfolio {
-  background: var(--green);
+/* Navigation */
+/*=======================================*/
+nav {
+  color: var(--green);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+nav li a {
+  color: var(--green);
+  padding: .05rem .5rem;
+  margin: 1rem .5rem;
+  text-transform: uppercase;
+}
+
+nav li a:hover,
+nav li a:focus {
+  background: var(--gold);
+  color: var(--white);
+}
+
+nav li a:active {
+  background: var(--brown);
   color: var(--white);
 }
 
@@ -164,6 +139,213 @@ header {
   fill: currentColor;
 }
 
+/* Header */
+/*=======================================*/
+header {
+  background: var(--blue);
+  background-image: url("../images/twotrees.jpg");
+  background-blend-mode: exclusion;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  display: grid;
+  min-height: 90vh;
+  place-items: center;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+header h1,
+header h2 {
+  color: var(--white);
+}
+
+header h1 { 
+  font-size: 3rem;
+  margin: 0 0 -1rem 0;
+}
+
+#tagline {
+  font-family: var(--font-alt);
+  text-transform: none;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Main */
+/*=======================================*/
+main { flex: 1 0 auto; }
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding: 0 1rem;
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+/* About */
+#about,
+#portfolio {
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+#about h3 {
+  color: var(--tan);
+  font-size: 2rem
+}
+
+#team {
+  grid-template-columns: repeat(3, 1fr);
+  place-self: center;
+  text-align: center;
+}
+/* Portfolio */
+#portfolio {
+  background: var(--green);
+  color: var(--white);
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  place-items: center;
+  text-align: center;
+}
+
+#portfolio h2 {
+  color: var(--white);
+}
+
+.carousel { position: relative; }
+
+.left-arrow,
+.right-arrow {
+  background: var(--gold);
+  border-radius: 50%;
+  height: 55px;
+  position: absolute;
+  vertical-align: 175%;
+  width: 55px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover,
+.left-arrow:focus,
+.right-arrow:focus {
+  background: var(--brown);
+  cursor: pointer;
+}
+
+.left-arrow { left: -30px; top: 30%; }
+.right-arrow { right: -30px; top: 30%; }
+
+
+/* Contact */
+#contact-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+#map img { margin: 0; }
+
+input,
+textarea {
+  background: var(--light-grey);
+  border: none;
+  color: var(--dark-grey);
+  display: block;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--dark-grey);
+  opacity: 1;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: 4px solid var(--gold);
+}
+
+#contact-form form button {
+  background: var(--green);
+  border: none;
+  color: var(--white);
+  font-family: var(--font-base);
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  place-self: end;
+  text-transform: uppercase;
+}
+
+#contact-form form button:hover,
+#contact-form form button:focus {
+  background: var(--gold);
+}
+
+#contact-form form button:active {
+  background: var(--brown);
+  outline: none;
+}
+
+/* Footer */
+/*=======================================*/
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 0 1rem;
+  margin: 2rem auto 0 auto;
+  max-width: 64em;
+}
+
+#socials li {
+  display: inline-block;
+  margin: 0 .25rem;
+}
+
+#socials a { color: var(--grey); }
+
+#socials a.facebook:hover { color: #3b5998; }
+#socials a.twitter:hover { color: #1da1f2; }
+#socials a.googleplus:hover { color: #dd4b39; }
+#socials a.pinterest:hover { color: #bd081c; }
+#socials a.dribbble:hover { color: #ea4c89; }
+
+#socials svg { height: 40px; width: 40px; }
+
+#to-top { color: var(--brown); place-self: end; }
+#to-top:hover,
+#to-top:focus { color: var(--green); }
+#to-top:active { color: var(--brown); }
+
+#to-top-btn {
+  background: var(--gold);
+  color: var(--white);
+  display: inline-block;
+  vertical-align: 12px;
+}
+
+#to-top-btn svg { height: 64px; width: 64px; }
+
+#to-top:hover #to-top-btn,
+#to-top:focus #to-top-btn { background: var(--green); }
+#to-top:active #to-top-btn { background: var(--brown); }
+
 /* Extra Responsiveness */
 /*=======================================*/
 @media (min-width: 320px) {
@@ -171,7 +353,7 @@ header {
 }
 
 @media (min-width: 768px) {
-  section {
+  section, footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
